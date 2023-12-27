@@ -1,4 +1,8 @@
-// Count Repeats
+//////////////////////////////////// Snack 4 ////////////////////////////////////
+
+const userInput = "aaabccccddyyyyyyeeff";
+
+// Using forEach
 function countRepeatingLetters(userInput) {
   let repeats = 1;
   let countedString = "";
@@ -17,7 +21,9 @@ function countRepeatingLetters(userInput) {
   });
   return countedString;
 }
+console.log("v1:", countRepeatingLetters(userInput));
 
+// Using Map, Filter
 function mapRepeatingLetters(userInput) {
   let reps, char;
   return userInput
@@ -29,6 +35,11 @@ function mapRepeatingLetters(userInput) {
     .toString()
     .replaceAll(",", "");
 }
+console.log("v2:", mapRepeatingLetters(userInput));
 
-console.log("v1:", countRepeatingLetters("aaabccccddyyyyyyeeff"));
-console.log("v2:", mapRepeatingLetters("aaabccccddyyyyyyeeff"));
+// Using RegEx
+function regExRepeatingLetters(userInput) {}
+
+console.log("v3:", regExRepeatingLetters(userInput));
+
+debugger;
